@@ -72,7 +72,7 @@ def best_random_par(graph, nodes, num_buses, size_bus, constraints, total_edges,
     max_par = []
     max_par_score = -1
     rgcm = 0
-    for _ in range(100):
+    for _ in range(3000):
         cp = random_partit(graph.number_of_nodes(), num_buses, size_bus)
         c_graph = graph.copy()
         rgc = 0
@@ -143,7 +143,7 @@ def neighbor(num_buses, size_bus, partition, par_factor):
     return c_partition + par
 
 def sim_anneal(num_buses, size_bus, start, nodes, graph, total_edges, cur_score, rowdy_sets):
-    T = 800
+    T = 10000
     i = 0
     par_factor = int(0.75 * num_buses)
     old_score = cur_score

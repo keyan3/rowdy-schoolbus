@@ -164,8 +164,8 @@ def main():
 	#pseudo_popular people (well connected, rowdy with themselves) 
 	pseudo_popular(k, k, s, graph, nodes) 
 
-	#nx.draw(graph)
-	#plt.show()
+	nx.draw(graph)
+	plt.show()
 
 	#parameters
 	print('txt written 1')

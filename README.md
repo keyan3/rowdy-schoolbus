@@ -5,6 +5,17 @@ Approximation algorithm for a modified version of the NP-hard [minimum k-cut pro
 
 Project spec can be found [here](https://d1b10bmlvqabco.cloudfront.net/attach/jhadltur59wtu/idril7rumak4d3/jocsqsxf370/CS_170_FA18_Project_Spec.pdf).
 
+### Input and Output
+
+Input consisted of a 10-1000 graph where nodes represented students and edges represented friendships between students, as well as a file listing "rowdy groups" of students ([example](https://github.com/keyan3/rowdy-schoolbus/blob/master/input-generators/parameters.txt)). The objective was to return a partition of the graph that maximizes the number of friendships within partitions while separating rowdy groups whenever possible.
+
+#### Example Input (20 students):
+![alt text](https://raw.githubusercontent.com/keyan3/rowdy-schoolbus/master/input-generators/input-graph.png)
+
+#### Output (partitions):
+['m', 'c', 'g', 'q'], ['d', 'p', 'r', 'f'], ['o', 'h', 'b', 't'], ['i', 'k', 'a', 'l'], ['n', 'j', 'e', 's']
+
+
 ### Full problem statement
 
 You are a tired, overworked teacher who has spent the last week organizing a field trip for your entire middle school. The night before the trip, you realize you forgot to plan the most important part – transportation! Fortunately, your school has access to a large fleet of buses. Being the caring teacher you are, you’d like to ensure that students can still end up on the same bus as their friends. After some investigative work on social media, you’ve managed to figure out exactly who is friends with who at your school and begin to assign students to buses with the intent of breaking up as few friendships as possible. You’ve only just begun when you receive a frantic email from one of the chaperones for the trip. The kids this year are particularly rowdy, and the chaperones have given you a list of groups of students who get too rowdy when they are all together. If any of these groups are seated assigned to the same bus, they will all have to be removed from the bus and sent home. Can you plan transportation while keeping both the students and the chaperones happy?

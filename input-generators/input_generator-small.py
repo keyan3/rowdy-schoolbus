@@ -139,8 +139,8 @@ def good_prisoners(k, s, graph, nodes): #rowdy with all other jocks except for t
 
 def main():
 	k = 5 #number of buses 
-	s = 8 #number of students per bus
-	numVertices = 40
+	s = 4 #number of students per bus
+	numVertices = 20
 	assert(k * s == numVertices)
 	nodes = name_generator(numVertices)
 	graph = nx.Graph()
@@ -164,8 +164,8 @@ def main():
 	#pseudo_popular people (well connected, rowdy with themselves) 
 	pseudo_popular(k, k, s, graph, nodes) 
 
-	#nx.draw(graph)
-	#plt.show()
+	nx.draw(graph)
+	plt.show()
 
 	#parameters
 	print('txt written 1')
@@ -175,19 +175,19 @@ def main():
 	print('txt written 5')
 
 	#write to GML file 
-	nx.write_gml(graph, "graph.gml")
+	#nx.write_gml(graph, "graph.gml")
 	
 	print('graph gend')
 
-	f1 = open('output.out', 'w')
-	for i in range(k):
-		local_lst = []
-		for j in range(s):
-			local_lst.append(nodes[i*s + j])
-		f1.write("{}".format(local_lst))
-		f1.write('\n')
+	#f1 = open('output.out', 'w')
+	#for i in range(k):
+	#	local_lst = []
+#		for j in range(s):
+#			local_lst.append(nodes[i*s + j])
+#		f1.write("{}".format(local_lst))
+#		f1.write('\n')
 
-	f1.close()
+#	f1.close()
 
 
 if __name__ == '__main__':
